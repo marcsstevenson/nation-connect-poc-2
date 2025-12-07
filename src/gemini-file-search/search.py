@@ -12,9 +12,9 @@ store_name = os.getenv('STORE_NAME')
 client = genai.Client()
 
 questions = [
-    # "What did the Māori people lose?",
-    # "what was the venue and date of the Waimate–Taiāmai ki Kaikohe hearing?",
-    # "in the REPORT OF THE WAITANGI TRIBUNAL ON THE MANGONUI SEWERAGE CLAIM (Wai-17), looking at FIGURE 2 - TAIPA, what is the name of the Bay?",
+    "What did the Māori people lose?",
+    "What was the venue and date of the Waimate–Taiāmai ki Kaikohe hearing?",
+    "in the REPORT OF THE WAITANGI TRIBUNAL ON THE MANGONUI SEWERAGE CLAIM (Wai-17), looking at FIGURE 2 - TAIPA, what is the name of the Bay?",
     "in the REPORT OF THE WAITANGI TRIBUNAL ON THE MANGONUI SEWERAGE CLAIM (Wai-17), looking at FIGURE 2 - TAIPA, what is the name of the Creek?",
 ]
 

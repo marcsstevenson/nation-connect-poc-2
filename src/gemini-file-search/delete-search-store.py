@@ -1,3 +1,8 @@
+"""
+Script to delete all documents from a specific file search store.
+Removes both the document references and the underlying files.
+"""
+
 from google import genai
 from google.genai import types
 import os
@@ -8,20 +13,21 @@ load_dotenv()
 
 store_name = os.getenv('STORE_NAME')
 
+# Initialize the Gemini API client
 client = genai.Client()
 
-# Get the file search store
+# Retrieve the file search store by name
 file_search_store = client.file_search_stores.get(name=store_name)
 
 print(f"Deleting all files from store: {store_name}")
 
-# List all documents in the store and delete them
+# Iterate through all documents in the store and delete them
 deleted_count = 0
 for doc in client.file_search_stores.documents.list(parent=store_name):
     print(f"Deleting {doc.display_name} ({doc.name})")
-    # Delete from the file search
+    # Delete the document from the file search store
     client.file_search_stores.documents.delete(name=doc.name, config={'force': True})
-    # delete the underlying file
+    # Delete the underlying file from storage
     client.files.delete(name=doc.name, config={'force': True})
 
     deleted_count += 1
