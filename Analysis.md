@@ -22,10 +22,10 @@ Note that the combined size of the files is 1GB, which is still within the limit
 
 ### Testing Results
 
-[eval-results.csv](src\gemini-file-search\eval-results.csv)
+[eval-results.csv](src/gemini-file-search/eval-results.csv)
 The testing results indicate that the Gemini API File Search Tool performs exceptionally well in terms of both speed and accuracy. The average response time for queries averaged ~8 seconds, and the average rated score of the results was 6.3/10 by the LLM judge (although evaluations by a subject mater expert would provide more definitive scoring).
 
-[evals-summary.md](src\gemini-file-search\evals-summary.md)
+[evals-summary.md](src/gemini-file-search/evals-summary.md)
 A summary of the above.
 
 > **Note:** Images within the PDF files were automatically extracted and indexed, which enhanced the search capabilities.
