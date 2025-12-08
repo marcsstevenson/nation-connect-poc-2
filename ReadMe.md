@@ -8,3 +8,7 @@ Surface a corpus of documents related to Māori history and culture within a ret
 
 - Researchers investigating their family history from a Māori perspective
 - Researchers in general
+
+## Analysis
+
+See [Analysis.md](Analysis.md)
